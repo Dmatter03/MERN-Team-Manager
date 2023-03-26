@@ -22,7 +22,7 @@ const GamePage = () => {
     return (
         <div>
             <div className='nav p-2'>
-                <h2><Link to={'/player'} className='text-secondary'>Manage Players</Link> |</h2>
+                <h2><Link to={'/'} className='text-secondary'>Manage Players</Link> |</h2>
                 <h2><Link to={'/status'} className='text-secondary'>Manage Player Status</Link></h2>
             </div>
             <div className='view'>

@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="App-nav">
         <Routes>
-          <Route path='/player' element={<DashBoard />} />
+          <Route path='/' element={<DashBoard />} />
           <Route path='/status' element={<GamePage />} />
-          <Route path='/player/new' element={<CreatePage />} />
+          <Route path='/new' element={<CreatePage />} />
         </Routes>
     </div>
   );

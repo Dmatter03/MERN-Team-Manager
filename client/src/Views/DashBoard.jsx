@@ -29,14 +29,14 @@ const DashBoard = () => {
     return (
         <div>
             <div className='nav p-2'>
-                <h2><Link to={'/player'} className='text-secondary'>Manage Players</Link> |</h2>
+                <h2><Link to={'/'} className='text-secondary'>Manage Players</Link> |</h2>
                 <h2><Link to={'/status'} className='text-secondary'>Manage Player Status</Link></h2>
             </div>
             <div>
                 <div className='view'>
                     <div className='nav p-2'>
-                        <h4><Link to={'/player'}>List</Link> |</h4>
-                        <h4><Link to={'/player/new'} >Add Player</Link></h4>
+                        <h4><Link to={'/'}>List</Link> |</h4>
+                        <h4><Link to={'/new'} >Add Player</Link></h4>
                     </div>
                     <table className="table table-hover table table-bordered  table-secondary">
                         <thead>

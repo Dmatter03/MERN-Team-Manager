@@ -32,7 +32,7 @@ const CreatePage = () => {
             </div>
             <div className='view'>
                 <div className='nav p-2'>
-                    <h4><Link to={'/player'}>List</Link> |</h4>
+                    <h4><Link to={'/'}>List</Link> |</h4>
                     <h4><Link >Add Player</Link></h4>
                 </div>
                 <div>
