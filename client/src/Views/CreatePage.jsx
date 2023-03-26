@@ -15,7 +15,7 @@ const CreatePage = () => {
         axios.post('http://localhost:8080/api/teams', newPlayer)
         .then((response) => {
                 console.log(response);
-                nav(`/player`);
+                nav(`/`);
             })
             .catch((error) => {
                 console.log(error.response);
