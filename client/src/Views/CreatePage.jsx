@@ -12,7 +12,7 @@ const CreatePage = () => {
 
 
     const formSubmit = (newPlayer) => {
-        axios.post('http://localhost:8080/api/teams', newPlayer)
+        axios.post('http://localhost:7000/api/teams', newPlayer)
         .then((response) => {
                 console.log(response);
                 nav(`/`);

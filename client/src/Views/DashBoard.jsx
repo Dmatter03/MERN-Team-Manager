@@ -10,7 +10,7 @@ const DashBoard = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/teams')
+        axios.get('http://localhost:7000/api/teams')
             .then((response) => {
                 console.log(response.data);
                 setPlayerList(response.data);

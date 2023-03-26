@@ -9,7 +9,7 @@ const DeleteButton = ({ team, successCallback }) => {
 
 
     const deletePlayer = () => {
-        axios.delete(`http://localhost:8080/api/teams/${team._id}`)
+        axios.delete(`http://localhost:7000/api/teams/${team._id}`)
         .then((response) => {
             console.log(response);
             successCallback();
