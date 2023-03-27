@@ -9,6 +9,7 @@ import Game from '../Components/Game';
 
 const GamePage = () => {
     const [playerList, setPlayerList] = useState();
+    
     const { id } = useParams();
     useEffect(() => {
         axios.get('http://localhost:7000/api/teams')

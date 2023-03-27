@@ -5,7 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 
 
-const PlayerForm = ({ team, formSubmit }) => {
+const PlayerForm = ({ team, formSubmit, formUnique  }) => {
     const [name, setName] = useState(team.name);
     const [position, setPosition] = useState(team.position);
 
@@ -25,6 +25,7 @@ const PlayerForm = ({ team, formSubmit }) => {
             <form onSubmit={handleSubmit} className='form'>
                 <label htmlFor="playerName">Team Player</label>
                 <input type='text' value={name} className='form-control' id="playerName" onChange={(e) => setName(e.target.value)} />
+                {formUnique && <p className="text-danger"> Player must already be on your team! </p>}
                 <label htmlFor="position">Perfered Position</label>
                 <input type='text' value={position} className='form-control ' onChange={(e) => setPosition(e.target.value)} />
                 <div className="submitButton text-end">

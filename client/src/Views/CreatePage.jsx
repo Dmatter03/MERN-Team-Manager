@@ -10,6 +10,8 @@ const CreatePage = () => {
     const nav = useNavigate();
     const { id } = useParams();
 
+    const [formUnique, setFormUnique] = useState(false);
+
 
     const formSubmit = (newPlayer) => {
         axios.post('http://localhost:7000/api/teams', newPlayer)
@@ -20,6 +22,11 @@ const CreatePage = () => {
             .catch((error) => {
                 console.log(error.response);
                 console.log(error.response.data.errors);
+                if (error.response.data.hasOwnProperty('keyValue')) {
+                    setFormUnique(true);
+                } else {
+                    setFormUnique(false)
+                }
             })
     }
 
@@ -36,7 +43,7 @@ const CreatePage = () => {
                     <h4><Link >Add Player</Link></h4>
                 </div>
                 <div>
-                    <PlayerForm  team={{  name: '', position: ''   }} formSubmit={formSubmit} /> 
+                    <PlayerForm  team={{  name: '', position: ''   }} formSubmit={formSubmit} formUnique={formUnique} /> 
                 </div>
             </div>
         </div>

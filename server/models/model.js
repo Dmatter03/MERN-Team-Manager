@@ -8,6 +8,7 @@ const TeamSchema = mongoose.Schema (
         name: { type: String, 
             required: [true, "Name is required"],
             minLength: [2, 'At least 2 characters required'],
+            unique: [true, 'This is not a validator']
         },
         position: { type: String, 
             required: [true, "position is required"],
